@@ -1,0 +1,101 @@
+// tinymce
+.mceContentBody { background: #F7F7F7; }
+.smallText { font-size: .9em; }
+
+
+/* ATTORNEY PROFILES */
+// fix pic on mobile
+@include breakpoint(only screen and (max-width 400px)) {
+	#attorneyProfile img.attorneyProfilePhoto { float:none; }
+}
+
+#attorneyProfile ul { padding-left: 0; list-style: none; }
+	#attorneyProfile img.attorneyProfilePhoto { float: right; margin: 0 0 10px 15px; }
+		#attorneyProfile div.attorneyProfileNarrative ul { list-style:disc; padding: 0 0 0 2em; }
+					#attorneyProfile div.attorneyProfileNarrative ul li { padding: 3px 0 3px 0;}
+		#attorneyProfile div.attorneyProfileSection ul { margin-left: 20px; }
+			#attorneyProfile div.attorneyProfileSection ul li { padding: 3px 0 3px 0;}
+				#attorneyProfile div.attorneyProfileSection ul li ul li { padding: 0 0 0 0; }
+				#attorneyProfile div.attorneyProfileSection p { padding: 3px 0 3px 20px; }
+#attorneyProfile .attorneyProfileName { padding-bottom: 0; display: none; }
+#attorneyProfile .attorneyProfilePositions { padding-bottom: 1.2em; }
+#attorneyProfile .attorneyProfileLocationLabel, #attorneyProfile .attorneyProfilePhoneLabel, #attorneyProfile .attorneyProfileFaxLabel, #attorneyProfile .attorneyProfileEmailLabel, #attorneyProfile .attorneyProfileVCardLabel { width: 6em; float: left; font-weight: bold; }
+#attorneyProfile .attorneyProfileLocation, #attorneyProfile .attorneyProfilePhone, #attorneyProfile .attorneyProfileFax, #attorneyProfile .attorneyProfileEmail, #attorneyProfile .attorneyProfileVCard { margin-left: 6em; padding-bottom: .6em; }
+#ie6 #attorneyProfile .attorneyProfileLocation, #ie6 #attorneyProfile .attorneyProfilePhone, #ie6 #attorneyProfile .attorneyProfileFax, #ie6 #attorneyProfile .attorneyProfileEmail, #ie6 #attorneyProfile .attorneyProfileVCard { display: inline-block; }
+#attorneyProfile .attorneyProfileEducation ul li strong { display: block; }
+#attorneyProfile .attorneyProfileContactInformation { padding-bottom: 1.2em; }
+
+/* E-MAIL OBFUSCATION */
+#containerEmailObfuscation, #containerEmailObfuscation * { margin: 0; padding: 0; }
+	#containerEmailObfuscation {}
+	#containerEmailObfuscation p.emailObfuscationNote { padding: 0; }
+	#emailObfuscation {}
+		#emailObfuscation fieldset { border: none; border-top: 1px solid #000; padding: 1em 0 0 1.2em; margin: 1em 0 0; }
+			#emailObfuscation fieldset legend { font-weight: bold; }
+			#ie #emailObfuscation fieldset legend { margin: 0 0 0 -.6em; }
+			#emailObfuscation fieldset label { cursor: pointer; }
+			#emailObfuscation fieldset label.formDescribeIssue { float: left; margin: .2em 0; }
+			#emailObfuscation fieldset .formHide { display: none; }
+			#emailObfuscation fieldset #formError { display: block; cursor: default; color: #f00; clear: both; }
+				#emailObfuscation fieldset #formError strong { font-weight: normal; }
+			#emailObfuscation fieldset input { display: block; width: 20.5em; margin: .2em 0 .5em 0; padding: 2px; }
+			#emailObfuscation fieldset input.intakeFormHiddenInput { padding: 0; }
+			#emailObfuscation fieldset textarea { clear: left; display: block; width: 25em; height: 10em; padding: 2px; margin: .2em 0 0 0; }
+			#emailObfuscation fieldset div.formHighlight * { border: 1px solid #aaa; }
+			#emailObfuscation fieldset div.formHighlight *:hover, #emailObfuscation fieldset div.formHighlight *:focus { background: #ffc; }
+			#emailObfuscation fieldset p { margin: .5em 0; }
+			#emailObfuscation fieldset div.formCheck { margin: .2em 0; }
+				#emailObfuscation fieldset .formCheck input { background: none; }
+				#emailObfuscation fieldset label input { display: inline; width: 2em; }
+				#emailObfuscation fieldset .formHasJavaScript { display: none; }
+				#emailObfuscation fieldset p img { float: left; margin: 0 1em 0 0; }
+		input#emailObfuscationSubmit { width: 12.5em; height: 2.5em; margin: .5em 0; }
+		
+/* ON-SITE SEARCH RESULTS */
+#searchResults dd { margin: 0 0 1.2em 0; }
+#searchResults .searchResultsHighlight { font-weight: bold; }
+#searchResults ul.searchResultsPagination, #searchResults ul.searchResultsPagination li { margin: 0; padding: 0; float: left; list-style: none; }
+	#searchResults ul.searchResultsPagination li { display: block; margin-right: .25em; }
+
+/* DESIGN DYNAMIC PRODUCTS ENEWSLETTER */
+.eNewsletterDesignModule { padding: 5px; }
+
+/* DESIGN DYNAMIC PRODUCTS FAQ */
+.faqDesignModule { padding: 5px; }
+	.faqDesignModule ul.faqDesignModuleList { margin: 0; padding: 0; list-style: none; overflow: visible; }
+		.faqDesignModule ul.faqDesignModuleList li { display: block; padding: 0 0 1.2em 0; }
+
+/* DESIGN DYNAMIC PRODUCTS NEWS */
+.newsDesignModule { padding: 5px; }
+	.newsDesignModule ul.newsDesignModuleList { margin: 0; padding: 0; list-style: none; overflow: visible; }
+		.newsDesignModule ul.newsDesignModuleList li { display: block; padding: 0 0 1.2em 0; }
+@include breakpoint(only screen and (max-width 978px)) {
+	.content {
+		iframe {
+			width:100%;
+		}
+	}
+}
+
+/* new contact module */
+.office {
+	padding: 0 0 15px 0;
+}
+.office-last {
+	padding: 0;
+}
+	.office-embedded-map {
+		position: relative;
+		height: 0;
+		padding-bottom: 80%;
+		margin:0 0 15px 0;
+	}
+		.office-embedded-map iframe {
+			width: 100%;
+			position: absolute;
+			height: 100%;
+		}
+	.office-photo img {
+		max-width:100%;
+		height:auto;
+	}

@@ -1,0 +1,90 @@
+/* INTAKE FORM ERRORS */
+.intakeFormError { color: #ff0000; font-weight: bold; }
+
+/* INTAKE FORM I */
+#containerIntakeFormI, #containerIntakeFormI * { margin: 0; padding: 0; }
+#containerIntakeFormI {}
+	#containerIntakeFormI p.intakeFormINote { padding: 0; }
+	#intakeFormI {}
+		#intakeFormI fieldset { border: none; border-top: 1px solid #000; padding: 1em 0 0 1.2em; margin: 1em 0 0; }
+			#intakeFormI fieldset legend { font-weight: bold; }
+			#ie #intakeFormI fieldset legend { margin: 0 0 0 -.6em; }
+			#intakeFormI fieldset label { cursor: pointer; }
+			#intakeFormI fieldset .formHide { display: none; }
+			#intakeFormI fieldset #formError { display: block; cursor: default; color: #f00; clear: both; }
+				#intakeFormI fieldset #formError strong { font-weight: normal; }
+			#intakeFormI fieldset label.formDescribeIssue { float: left; margin: .2em 0; }
+			#intakeFormI fieldset div.formCheck label { margin: 0 3em 0 0;}
+			#intakeFormI fieldset div.formCheck label[for="intakeFormIDisclaimerCheck"] { margin: 0; }
+			#intakeFormI fieldset input, #intakeFormI fieldset select { display: block; width: 20.5em; margin: .2em 0 .5em 0; padding: 2px; }
+			#intakeFormI fieldset input.intakeFormHiddenInput { padding: 0; }
+			#intakeFormI fieldset div.formHighlight * { border: 1px solid #aaa; }
+			#intakeFormI fieldset div.formHighlight *:hover, #intakeFormI fieldset div.formHighlight *:focus { background: #ffc; }
+			#intakeFormI fieldset select { width: 21em; }
+				#intakeFormI fieldset label input { display: inline; width: 2em; margin: 0; }
+			#intakeFormI fieldset textarea { clear: left; display: block; width: 25em; height: 10em; padding: 2px; margin: .2em 0 0 0; }
+			#intakeFormI fieldset p { margin: .5em 0; }
+			#intakeFormI fieldset div.formCheck { margin: .5em 0; }
+				#intakeFormI fieldset .formCheck input { background: none; }
+			#intakeFormI img.formDisclaimer { float: left; margin: 0 1em 0 0; }
+		#intakeFormISubmit { width: 12.5em; height: 2.5em; margin: .5em 0; }
+
+/* DESIGN INTAKE FORM SHORT */
+#containerIntakeFormShort, #containerIntakeFormShort *, #containerIntakeFormShortAutofill, #containerIntakeFormShortAutofill * { margin: 0; padding: 0; }
+		#intakeFormShort fieldset, #intakeFormShortAutofill fieldset { border: none; }
+			#intakeFormShort fieldset legend span, #intakeFormShort fieldset label span, #intakeFormShortAutofill fieldset legend span, #intakeFormShortAutofill fieldset label span, #intakeFormShortAutofill fieldset label.formLabelHide { position: absolute; left: -9000em; }
+			#intakeFormShort fieldset label, #intakeFormShortAutofill fieldset label { cursor: pointer; }
+			#intakeFormShort fieldset .formHide, #intakeFormShortAutofill fieldset label.formHide { display: none; }
+				#intakeFormShort fieldset #formError strong, #intakeFormShortAutofill fieldset #formError strong { font-weight: normal; }
+			#intakeFormShort fieldset input.intakeFormHiddenInput, #intakeFormShortAutofill fieldset input.intakeFormHiddenInput { padding: 0; }
+			#intakeFormShort fieldset textarea, #intakeFormShortAutofill fieldset textarea { height: 80px; }
+			#intakeFormShort fieldset .formCheck, #intakeFormShortAutofill fieldset .formCheck { display: block; line-height: 1.5em; }
+			#intakeFormShort fieldset label input, #intakeFormShortAutofill fieldset label input { display: inline; width: 20px; margin: 0 0 0 -3px; padding: 0; }
+				#intakeFormShort fieldset input.checkbox, #intakeFormShortAutofill fieldset input.checkbox { background: none; }
+			/* pop-up disclaimer */
+			#intakeFormShortDisclaimer { display: none; width: 200px; font-size: 12px; position:relative;}
+				#intakeFormShortDisclaimer div { border: 2px solid #333; background: #fff; color: #000; padding: 5px; position:absolute; top:0; left:0; }
+					#intakeFormShortDisclaimer p { clear: both; overflow: auto; padding: 10px 15px .8em; font-family: Verdana, Geneva, sans-serif; }
+					#intakeFormShortDisclaimer a { display: block; margin: 0 15px 0 0; color: #00f; font-weight: bold; text-decoration: none; }
+/* DESIGN INTAKE FORM SHORT - Common Edits */
+/* text color, size */
+#containerIntakeFormShort, #containerIntakeFormShortAutofill { font-size: .91em; font-family: Verdana, Geneva, sans-serif; }
+	#containerIntakeFormShort p, #containerIntakeFormShortAutofill p { padding: 0 0 .5em 0; }
+			/* form error color */
+			#intakeFormShort fieldset #formError, #intakeFormShortAutofill fieldset #formError { display: block; cursor: default; color: #f00; }
+			#intakeFormShortAutofill fieldset #formError { padding: 0 0 2px 0; }
+			/* input width, margin, padding, color */
+			#intakeFormShort fieldset input, #intakeFormShort fieldset textarea, #intakeFormShortAutofill fieldset input, #intakeFormShortAutofill fieldset textarea { display: block; width: 150px; font-family: Verdana, Geneva, sans-serif; margin: .2em 0 .5em 0; padding: 3px; }
+			/* input border color */
+			#intakeFormShort fieldset div.formHighlight *, #intakeFormShortAutofill fieldset div.formHighlight * { border: 1px solid #aaa; }
+			/* input bg color on hover */
+			#intakeFormShort fieldset div.formHighlight *:hover, #intakeFormShort fieldset div.formHighlight *:focus, #intakeFormShortAutofill fieldset div.formHighlight *:hover, #intakeFormShortAutofill fieldset div.formHighlight *:focus { background: #ffc; }
+				/* disclaimer link color */
+				#intakeFormShort fieldset .formCheck a:link, #intakeFormShort fieldset .formCheck a:visited, #intakeFormShortAutofill fieldset .formCheck a:link, #intakeFormShortAutofill fieldset .formCheck a:visited {}
+				#intakeFormShort fieldset .formCheck a:hover, #intakeFormShort fieldset .formCheck a:focus, #intakeFormShortAutofill fieldset .formCheck a:hover, #intakeFormShortAutofill fieldset .formCheck a:focus {}
+		#intakeFormShortSubmit, #intakeFormShortAutofillSubmit { width: auto; height: auto; margin: .5em 0; }
+
+/* DESIGN ON-SITE SEARCH */
+#containerSearchFormDesign, #searchFormDesign { margin: 0; padding: 0; }
+#containerSearchFormDesign {}
+	#searchFormDesign {}
+		#searchFormDesign label {}
+		#searchFormDesign #searchFormDesignSearchTerms { margin: 0; padding: 0; width: 150px; border: 1px solid #ccc; }
+		#searchFormDesign #searchFormDesignSearchTerms:focus, #searchFormDesign #searchFormDesignSearchTerms:hover { border-color: #000; }
+		#searchFormDesign #searchFormDesignSubmit { width: auto; height: auto; display: inline; vertical-align: top; }
+		#searchFormDesign label { cursor: pointer; }
+		#searchFormDesign .formLabelHide { position: absolute; left: -5000px; }
+
+.map-module { margin: 10px 0; }
+
+// fix for responsive
+@include breakpoint(only screen and (max-width 600px)) {
+	.content {
+		input[type="text"], textarea, fieldset select {
+			width:90%!important;
+		}
+	}
+	 #intakeFormI input[type="text"], #intakeFormI textarea, #intakeFormI fieldset select, #emailObfuscation input[type="text"], #emailObfuscation fieldset textarea, #emailObfuscation fieldset select {
+	 	width:90%!important;
+	 }
+}

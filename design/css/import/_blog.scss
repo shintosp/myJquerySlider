@@ -1,0 +1,74 @@
+/*BLOG*/
+#navigationBlog { padding: 0 5%; }
+	.group { }
+		/* group headings = h4. sIFR is okay to use */
+		.group h4 { text-transform: uppercase; font-size: 16px; }
+		/* ul color = bullet color */
+		.group ul { list-style: none; padding: 0; margin: 0; }
+		.group ul li { display: inline; }
+		.group a { display: block; padding: 3px 0; }
+		.group a:hover, .group a:focus, .group a.current { }
+#tagCloud ul { list-style: none; }
+	#tagCloud li { display: inline; margin: 0 5px 0 0; padding: 0; line-height: 1.2; background: none; border: 0; }
+		#tagCloud li a { display: inline; background: none; padding: 0; }
+		#tagCloud .tagRank1 { font-size: 20px; }
+		#tagCloud .tagRank2 { font-size: 19px; }
+		#tagCloud .tagRank3 { font-size: 18px; }
+		#tagCloud .tagRank4 { font-size: 19px; }
+		#tagCloud .tagRank5 { font-size: 18px; }
+		#tagCloud .tagRank6 { font-size: 15px; }
+		#tagCloud .tagRank7 { font-size: 12px; }
+		#tagCloud .tagRank8 { font-size: 11px; }
+		#tagCloud .tagRank9 { font-size: 10px; }
+		#tagCloud .tagRank10 { font-size: 9px; }
+.post { clear: both; border-top: 1px dotted #ccc; padding: 19px 0; }
+.postFirst { border: none; padding-top: 0; }
+	.post h2 { padding: 0 0 3px; }
+		/* on the blog homepage, h2 are links */
+		.post h2 a { text-decoration: underline; }
+		.post h2 a:hover, .post h2 a:focus, .post h2 a.current { text-decoration: none; }
+	.byline { }
+	.containerPostContent { }
+		.postContent { }
+		.postMeta { clear: both; }
+			.postMeta p { padding: 0 0 5px; }
+			.postMeta p.tags { }
+			.postMeta p.commentCount { }
+			.postMeta p.share { }
+#comments { }
+	#comments h2 { }
+	.containerComment { clear: both; padding: 14px 0 5px; }
+		.containerComment .byline { }
+		.comment { border-bottom: 1px dotted #ccc; }
+			.commentContent { }
+#containerBlogCommentForm, #containerBlogCommentForm *, #containerBlogCommentFormAutofill, #containerBlogCommentFormAutofill * { margin: 0; padding: 0; }
+		#blogCommentForm fieldset, #blogCommentFormAutofill fieldset { border: none; }
+			#blogCommentForm fieldset legend span, #blogCommentForm fieldset label span, #blogCommentFormAutofill fieldset legend span, #blogCommentFormAutofill fieldset label span, #blogCommentFormAutofill fieldset label.formLabelHide { position: absolute; left: -9999px; }
+			#blogCommentForm fieldset label, #blogCommentFormAutofill fieldset label { cursor: pointer; }
+			#blogCommentForm fieldset .formHide, #blogCommentFormAutofill fieldset label.formHide { display: none; }
+				#blogCommentForm fieldset #formError strong, #blogCommentFormAutofill fieldset #formError strong { font-weight: normal; }
+			#blogCommentForm fieldset input.intakeFormHiddenInput, #blogCommentFormAutofill fieldset input.intakeFormHiddenInput { padding: 0; }
+			#blogCommentForm fieldset textarea, #blogCommentFormAutofill fieldset textarea { height: 100px; }
+/* BLOG COMMENT FORM - Common Edits */
+/* text color, size */
+#containerBlogCommentForm, #containerBlogCommentFormAutofill { font-family: Verdana, Geneva, sans-serif; }
+	#containerBlogCommentForm p, #containerBlogCommentFormAutofill p { padding: 0 0 5px 0; color: #aa9272; }
+	#blogCommentForm, #blogCommentFormAutofill { padding: 15px 0 0 0; }
+			/* form error color */
+			#blogCommentForm fieldset #formError, #blogCommentFormAutofill fieldset #formError { display: block; cursor: default; color: #f00; }
+			#blogCommentFormAutofill fieldset #formError { padding: 0 0 2px 0; }
+			/* input width, margin, padding, color */
+			#blogCommentForm fieldset input, #blogCommentForm fieldset textarea, #blogCommentFormAutofill fieldset input, #blogCommentFormAutofill fieldset textarea { display: block; width: 90%; margin: 2px 0 5px; padding: 5px 5%; background: #fff; color: #999; }
+			/* input border color */
+			#blogCommentForm fieldset div.formHighlight *, #blogCommentFormAutofill fieldset div.formHighlight * { border: 1px solid #a7a7a7; }
+			/* input bg color on hover */
+			#blogCommentForm fieldset div.formHighlight *:hover, #blogCommentForm fieldset div.formHighlight *:focus, #blogCommentFormAutofill fieldset div.formHighlight *:hover, #blogCommentFormAutofill fieldset div.formHighlight *:focus {}
+				/* disclaimer link color */
+				#blogCommentForm fieldset .formCheck a:link, #blogCommentForm fieldset .formCheck a:visited, #blogCommentFormAutofill fieldset .formCheck a:link, #blogCommentFormAutofill fieldset .formCheck a:visited { color: #bb9b65; text-decoration: underline; }
+				#blogCommentForm fieldset .formCheck a:hover, #blogCommentForm fieldset .formCheck a:focus, #blogCommentFormAutofill fieldset .formCheck a:hover, #blogCommentFormAutofill fieldset .formCheck a:focus { color: #bb9b65; text-decoration: none; }
+		#blogCommentFormAutofill fieldset #comment-submit, #blogCommentFormAutofill fieldset #comment-cancel, #blogCommentFormAutofill fieldset #comment-preview { width: auto; height: auto; margin: 5px 0; padding: 0; }
+.pagination { clear: both; border-top: 1px dotted #ccc; padding: 19px 0; float: left; width: 100%; }
+	.pagination ol { list-style: none; padding: 0; }
+		.pagination li { float: left; margin-right: 5px; }
+		.pagination li.resultsPrevious { margin-right: 5px; }
+		.pagination li.resultsNext {}

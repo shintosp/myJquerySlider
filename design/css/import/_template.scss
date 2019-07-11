@@ -1,0 +1,380 @@
+/* =============================================================================
+	 DEFAULT TEMPLATE STYLES
+	 Revision History:
+	 06/15/2014 - Brian Saycocie
+	 09/17/2012 - Matt Biersdorf
+	 ========================================================================== */
+
+html {
+	padding: 0 2%;
+}
+
+body {
+	font: 1em/1.5em 'Arial', sans-serif;
+	@include background-image(linear-gradient(top, #ffffff, #bababc));
+	@include transition(all, .2s, ease);
+	background-repeat: no-repeat;
+	background-position: -10% -5%;
+	margin: 0 auto;
+}
+
+a {
+	color: #ff9600;
+	&:visited {
+		color: #ff9600;
+	}
+	&:hover, &:focus {
+		color: #f14a00;
+	}
+	&:active {}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #FF9600;
+	font-family: 'Georgia', serif;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+}
+
+.container-page {
+	margin: 0 auto;
+}
+
+/*
+| Search Form
+*/
+
+#containerSearchFormDesign {
+	#searchFormDesignSearchTerms {
+		height: 25px;
+		padding: 0 5px;
+		line-height: 25px;
+	}
+}
+
+.header-page {
+	padding: 0 0 1.5em;
+	.brand {
+		margin: 0 0 .5em;
+		float: left;
+		font: 3em/1 "Georgia", serif;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	.cta {
+		color: #838383;
+		&:focus, &:hover, .current {
+			color: #ccc;
+		}
+	}
+
+	/*
+	| Short Form
+	*/
+
+	.short-form {
+		clear: both;
+		float: right;
+
+		.formHighlight {
+			float: left;
+			width: 50%;
+		}
+
+		input, textarea {
+			width: 95% !important;
+		}
+
+		.formCheck {
+			clear: both;
+
+			input {
+			display: inline-block !important;
+			margin-right: 5px !important;
+			width: auto !important;
+			}
+		}
+
+		label[for="intakeFormShortPhone"] + .formHighlight {
+			clear: both;
+		}
+
+		.submit {
+			float: right;
+			margin-right: 12px !important;
+			width: auto !important;
+		}
+	}
+
+	/*
+	| Search Form
+	*/
+
+	#containerSearchFormDesign {
+		clear: both;
+		float: right;
+		margin: 1em 0;
+	}
+}
+
+.container-columns {
+	clear: both;
+	@include box-shadow(0 0 8px rgba(0, 0, 0, .4));
+	background: #fff;
+
+	/*
+	| Search Form
+	*/
+
+	#containerSearchFormDesign {
+		margin: 1em 5%;
+
+		#searchFormDesignSearchTerms {
+			width: 65% !important;
+		}
+
+		#searchFormDesignSubmit {
+			width: 30%;
+		}
+	}
+}
+
+.column-main {
+	h1 {
+		margin: 1.5em 5% 0;
+		color: #ff9600;
+		font-size: 1.5em;
+		padding: .3em 0 0;
+		text-transform: uppercase;
+	}
+}
+
+.content {
+	padding: 0 5% 1.5em;
+	line-height: 1.5;
+}
+
+.column-side {
+	@include background-image(linear-gradient(top, #ededed, #e5e5e5));
+	@include box-shadow(1px 1px 5px rgba(0, 0, 0, 0.41));
+	margin: 1.3em 0 0;
+}
+
+.column-side, .column-additional {
+	#containerIntakeFormShortAutofill {
+		font-size: .8em;
+	}
+
+	input[type="text"], textarea {
+		width: 100% !important;
+	}
+}
+
+.title-practice, .title-contact {
+	margin: 1em 5%;
+	color: #ff9600;
+	font-size: 1.3em;
+	text-shadow: none;
+}
+
+.container-contact {
+	margin: 0 0 0 5%;
+}
+
+.footer-page {
+	padding: 1em 0;
+	clear: both;
+	color: #fff;
+
+	/*
+	| Short Form
+	*/
+
+	.short-form {
+		float: left;
+		width: 44%;
+		margin: 0 3% 0 3%;
+
+		input[type="text"], textarea {
+			width: 100% !important;
+		}
+	}
+
+	.title-short-form {
+		font-size: 1.5em;
+		text-shadow: 0 0 10px #666;
+		color: #fff;
+	}
+
+	/*
+	| Search Form
+	*/
+
+	#containerSearchFormDesign {
+		float: left;
+		margin: 1em 3% 1em;
+	}
+
+	.geography {
+		p { margin-top: 0; }
+	}
+	.fine-print {
+		padding: 0 0 .4em;
+		a {
+			&:hover, &:focus { }
+		}
+		.copyright { margin: 0; }
+		.branding { }
+	}
+	a {
+		color: #fff;
+	}
+}
+
+/* =============================================================================
+	 Media Query - 745px
+	 ========================================================================== */
+@include breakpoint(max-width 800px) {
+	.header-page {
+		padding: 0 0 1.5em;
+
+		.brand, .cta, .tagline {
+			display: table;
+			float: none;
+			margin: 1em auto;
+		}
+
+		.brand {
+			margin: .3em auto;
+		}
+
+		.cta {
+			color: #838383;
+		}
+
+		.tagline {
+			clear: both;
+			font-size: 1.5em;
+			color: #838383;
+		}
+	}
+}
+
+
+@include breakpoint(only screen and (max-width 745px)) {
+	html {
+		padding: 0 2%;
+	}
+
+	body {
+		@include background-image(linear-gradient(top, #ffffff, #bababc));
+		max-width: auto;
+		font-size: .8em;
+	}
+
+	.container-columns {
+		@include box-shadow(0 0 8px rgba(0, 0, 0, .4));
+		background: #fff;
+	}
+
+	.column-main {
+		h1 {
+			margin: 1.5em 5% 0;
+			color: #ff9600;
+			font-size: 1.5em;
+			padding: .3em 0 0;
+			text-transform: uppercase;
+		}
+	}
+
+	.content {
+		padding: 0 5% 1.5em;
+		line-height: 1.5;
+	}
+
+	.column-side {
+		@include background-image(linear-gradient(top, #ededed, #e5e5e5));
+		@include box-shadow(1px, 1px, 5px, rgba(0, 0, 0, 0.41));
+		margin: 1.3em 0 0;
+	}
+
+	.title-practice, .title-contact {
+		margin: 1em 5%;
+		color: #ff9600;
+		font-size: 1.3em;
+		text-shadow: none;
+	}
+
+	.container-contact {
+		margin: 0 0 0 5%;
+	}
+
+	.footer-page {
+		padding: 1em 0;
+		clear: both;
+		color: #fff;
+		.geography {
+			p { margin-top: 0; }
+		}
+		.fine-print {
+			padding: 0 0 .4em;
+			a {
+				&:hover, &:focus { }
+			}
+			.copyright { }
+			.branding { }
+		}
+		a {
+			color: #fff;
+		}
+	}
+}
+
+/* =============================================================================
+	 Media Query - 600px
+	 ========================================================================== */
+@include breakpoint(only screen and (max-width 600px)) {
+
+	.header-page {
+		.brand {
+			font-size: 2.5em;
+		}
+	}
+
+	.column-main {
+		float: none;
+	}
+	.column-side {
+		float: none;
+	}
+
+}
+
+/* =============================================================================
+	 Media Query - 430px
+	 ========================================================================== */
+@include breakpoint(only screen and (max-width 430px)) {
+	body {
+		background: #f9f9f9;
+	}
+
+	.header-page {
+		.cta {
+			clear: both;
+			&:hover {
+				color: #666;
+			}
+		}
+	}
+	.footer-page {
+		color: #999;
+		.geography {
+
+		}
+		.fine-print {
+
+		}
+		a {
+			color: #999;
+		}
+	}
+}

@@ -1,0 +1,327 @@
+// drop down
+@mixin fl-drop-transition{
+	transition-property:opacity, visibility;
+	transition-duration:200ms, 200ms;
+	transition-timing-function:ease-out, linear;
+	transition-delay:0s;
+}
+@mixin fl-drop-styles {
+	margin:0;
+	padding:0;
+	list-style: none;
+	position:relative;
+}
+@mixin fl-drop-ulul {
+	display:block;
+	position:absolute;
+	visibility:hidden;
+	opacity:0;
+	margin:0;
+	padding:0;
+}
+@mixin fl-drop-a {
+	a {
+		display:block;
+	}
+}
+@mixin fl-drop-hover {
+	&:hover, &:focus, &.drop-active {
+		> ul {
+			visibility:visible;
+			opacity:1;
+			z-index:999999;
+		}
+	}
+}
+@mixin fl-drop-hover-all {
+	&:hover, &:focus, &.drop-active {
+		ul {
+			visibility:visible;
+			opacity:1;
+			z-index:999999;
+		}
+	}
+}
+@mixin fl-drop-down {
+	ul {
+		@include fl-drop-styles;
+		li {
+			@include fl-drop-styles;
+			@include fl-drop-hover;
+			@include fl-drop-a;
+			ul {
+				@include fl-drop-transition;
+				@include fl-drop-ulul;
+				top:100%;
+				left:auto;
+				li {
+					width:auto;
+					display:block;
+					float:none;
+					@include fl-drop-hover-all;
+					ul {
+						left:100%;
+						top:0;
+						visibility:hiddden;
+						ul {
+							visibility:hiddden;
+							opacity:0;
+							position:relative;
+							left:auto;
+							right:auto;
+						}
+					}
+				}
+			}
+		}
+		.last-child > ul > li > ul {
+			left:auto;
+			right:100%;
+		}
+	}
+}
+@mixin fl-drop-down-all {
+	ul {
+		@include fl-drop-styles;
+		li {
+			@include fl-drop-styles;
+			@include fl-drop-hover;
+			@include fl-drop-a;
+			@include fl-drop-hover-all;
+			ul {
+				@include fl-drop-ulul;
+				top:100%;
+				left:auto;
+				li {
+					width:auto;
+					display:block;
+					float:none;
+					ul {
+						position:relative;
+						left:auto;
+						right:auto;
+					}
+				}
+			}
+		}
+	}
+}
+@mixin fl-drop-down-multiple {
+	ul {
+		@include fl-drop-styles;
+		li {
+			@include fl-drop-styles;
+			@include fl-drop-hover;
+			@include fl-drop-a;
+			ul {
+				@include fl-drop-transition;
+				@include fl-drop-ulul;
+				top:100%;
+				left:auto;
+				li {
+					width:auto;
+					display:block;
+					float:none;
+					ul {
+						left:100%;
+						top:0;
+						visibility:hiddden;
+						opacity:0;
+						ul {
+							left:auto;
+							right:100%;
+							visibility:hiddden;
+							opacity:0;
+							ul {
+								left:100%;
+								right:auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@mixin fl-drop-horiz($left,$right){
+	ul {
+		@include fl-drop-styles;
+		li {
+			@include fl-drop-styles;
+			@include fl-drop-hover;
+			@include fl-drop-a;
+			display:block;
+			ul {
+				@include fl-drop-transition;
+				@include fl-drop-ulul;
+				top:0;
+				left:$left;
+				right:$right;
+				li {
+					width:auto;
+					display:block;
+					float:none;
+					@include fl-drop-hover-all;
+					ul {
+						left:$left;
+						right:$right;
+						top:0;
+						visibility:hiddden;
+						ul {
+							visibility:hiddden;
+							opacity:0;
+							position:relative;
+							left:auto;
+							right:auto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@mixin fl-drop-right {
+	@include fl-drop-horiz(100%,auto);
+}
+@mixin fl-drop-left {
+	@include fl-drop-horiz(auto,100%);
+}
+.fl-drop-left {
+	ul li ul { 
+		left:auto!important;
+		right:100%!important;
+		li ul {
+			right:auto!important;
+		}
+	}
+}
+.fl-drop-right {
+	ul li ul { 
+		right:auto!important;
+		left:100%!important;
+		li ul {
+			left:auto!important;
+		}
+	}
+}
+
+// navs
+@mixin fl-nav-justify {
+	ul {
+		@include fl-drop-styles;
+		display:block;
+		width:100%;
+		box-sizing:border-box;
+		text-align: justify;
+		text-justify: distribute-all-lines;
+		li {
+			display:inline-block;
+			a {
+				display:block;
+			}
+			ul {
+				text-align:left;
+				text-justify: auto;
+			}
+		}
+	}
+	> ul:after {
+		content:'';
+		width:100%;
+		display:inline-block;
+		height:0px;
+	}
+	.fl-justify {
+		width:100%;
+		display:inline-block;
+	}
+}
+@mixin fl-nav-table {
+	ul {
+		@include fl-drop-styles;
+		display:table;
+		width:100%;
+		table-layout:fixed;
+		li {
+			display:table-cell;
+		}
+	}
+}
+
+
+// toggle
+.fl-show { display:block!important; }
+.fl-accordion-horizontal .fl-show {
+	display:inline-block!important;
+}
+
+
+// accordion
+@mixin fl-nav-accordion-styles {
+	position:relative;
+	top:auto;
+	left:auto;
+	right:auto;
+	float:none;
+	visibility:visible;
+	opacity:1;
+	width:auto;
+}
+@mixin fl-nav-accordion {
+	ul {
+		display:block;
+		@include fl-nav-accordion-styles;
+		li {
+			display:block;
+			@include fl-nav-accordion-styles;
+			a {
+				display:block;
+			}
+			ul {
+				display:none;
+				@include fl-nav-accordion-styles;
+				li {
+					@include fl-nav-accordion-styles;
+					ul {
+						@include fl-nav-accordion-styles;
+						li {
+							@include fl-nav-accordion-styles;
+							ul {
+								@include fl-nav-accordion-styles;
+							}
+						}
+					}
+				}
+			}
+		}
+		.last-child > ul > li > ul {
+			@include fl-nav-accordion-styles;
+		}
+		.fl-drop-active > ul {
+			display:block;
+		}
+	}
+}
+@mixin fl-nav-accordion-horizontal {
+	@include fl-nav-accordion;
+	ul {
+		li {
+			display:inline-block;
+			a {
+				display:inline-block;
+			}
+		}
+	}
+}
+
+@mixin fl-nav-accordion-symbols {
+	.fl-accordion .has-child > a:before {
+		content:'\02B\0A0';
+	}
+	.fl-accordion .has-child > .fl-scripts-hover-intent:before {
+		content:'\03E\0A0';
+	}
+	.fl-accordion .has-child > a[href="#"].fl-scripts-toggle-enabled:before {
+		content:'\02D\0A0';
+	}
+}

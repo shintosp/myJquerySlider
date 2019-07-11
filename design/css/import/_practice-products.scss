@@ -1,0 +1,71 @@
+/* FS PUBLISHER - PRACTICE PRODUCTS STYLESHEET - UPDATED 08-14-2009 */
+
+#practicePage {}
+	#practicePageSide { float: right; width: 182px; margin: 0 0 0 15px; }
+		#practicePageFormShort { border: solid 1px #000000; padding: 10px 15px; width: 152px; margin: 0 0 15px 0; }
+			#practicePageFormShort form { margin: 0; }
+			#practicePageFormShort p { padding: 0; margin: 0; }
+			#practicePageFormShort br { line-height: 0; }
+			#practicePageFormShort a { margin: 10px 0 0 0; display: block; }
+			#practicePageFormShort .practicePageFormShortHeader { font-weight: bold; }
+			#practicePageFormShort .practicePageFormShortHeaderLine1 {}
+			#practicePageFormShort .practicePageFormShortHeaderLine2 { margin: 0 0 10px 0; }
+			#practicePageFormShort input { margin-bottom: 5px; }
+			#practicePageFormShort .practicePageFormSubmit { width: 73px; }
+		#practicePageCallToAction { border: solid 1px #000000; background-color: #cccccc; color: #333333; padding: 10px; margin: 0 0 15px 0; }
+			#ie6 #practicePageCallToAction { width:164px; }
+			#practicePageCallToAction p { margin: 0; padding: 10px; }
+		#practicePageSidebar2 { padding: 10px; border: solid 1px #000000; background-color: #eeeeee; color: #333333; margin: 0 0 15px 0; }
+			#ie6 #practicePageSidebar2 { width:165px; }
+		#practicePageFAQAbstract { border: solid 1px #000000; padding: 10px 15px; }
+			#ie6 #practicePageFAQAbstract { width:155px; }
+		#practicePageLinksAbstract { border: solid 1px #000000; padding: 10px 15px; }
+		#practicePageSidebar1 { padding: 10px; border: solid 1px #000000; background-color: #eeeeee; color: #333333; margin: 15px 197px 15px 0; }
+			#ie #practicePageSidebar1 { display: inline-block; }
+.practicePageError { color: #ff0000; font-weight: bold; }
+
+#practiceCenter {}
+	#practiceCenterSide { float: right; width: 182px; margin: 0 0 0 15px; }
+		#practiceCenterFormShort { border: solid 1px #000000; padding: 10px 15px; margin: 0 0 15px 0; }
+			#practiceCenterFormShort form { margin: 0; }
+			#practiceCenterFormShort p { padding: 0; margin: 0; }
+			#practiceCenterFormShort br { line-height: 0; }
+			#practiceCenterFormShort a { margin: 10px 0 0 0; display: block; }
+			#practiceCenterFormShort .practiceCenterFormShortHeader { font-weight: bold; }
+			#practiceCenterFormShort .practiceCenterFormShortHeaderLine1 {}
+			#practiceCenterFormShort .practiceCenterFormShortHeaderLine2 { margin: 0 0 10px 0; }
+			#practiceCenterFormShort input { margin-bottom: 5px; }
+			#practiceCenterFormShort .practiceCenterFormSubmit { width: 73px; }
+			#practiceCenterCallToAction { border: solid 1px #000000; background-color: #cccccc; color: #333333; padding: 10px; margin: 0 197px 15px 0; }
+				#ie6 #practiceCenterCallToAction { margin-right: 202px; }
+				#practiceCenterCallToAction p { margin: 0; padding: 10px; }
+		#practiceCenterSidebar2 { padding: 10px; border: solid 1px #000000; background-color: #eeeeee; color: #333333; margin: 0 0 15px 0; }
+			#ie6 #practiceCenterSidebar2 { width:165px; }
+		#practiceCenterResourceLinksAbstract {}
+			#practiceCenterResourceLinksAbstract hr { height: 1px; border: none; border-top: 1px solid #000000; margin: 0 0 10px 0; }
+		#practiceCenterSidebar1 { padding: 10px; border: solid 1px #000000; background-color: #eeeeee; color: #333333; margin: 15px 197px 15px 0; }
+			#ie #practiceCenterSidebar1 { display: inline-block; }
+		#practiceCenterFAQAbstract { border: solid 1px #000000; padding: 10px 15px; }
+			#ie6 #practiceCenterFAQAbstract { width:155px; }
+#practiceCenterNews {}
+	ul.practiceCenterNewsList { margin: 0; padding: 0 0 1.2em 0; list-style: none; overflow: visible; }
+		ul.practiceCenterNewsList li { display: block; }
+#practiceCenterFamilyLawCalculator { background-color: #eeeeee; border: solid 1px #000000; padding: 10px 15px; width: 150px; margin: 0 0 15px 0; }
+	#practiceCenterFamilyLawCalculator .practiceCenterFamilyLawCalculatorHeader { font-weight: bold; }
+	#practiceCenterFamilyLawCalculator form { margin: 0; }
+.practiceCenterError { color: #ff0000; font-weight: bold; }
+#practiceCenterNavigation { border: solid 1px #000000; margin: 0 0 15px 0; }
+	#practiceCenterNavigation ul { list-style: none; margin: 0; padding: 10px 10px 0 10px; }
+	#practiceCenterNavigation li { margin: 0 0 10px 0; }
+.practiceCenterTitle { display: none; }
+
+@include breakpoint(only screen and (max-width 978px)) {
+	#practiceCenterSide {
+		width:auto;
+		float:none;
+		margin:0;
+		input, textarea {
+			width:100%!important;
+		}
+	}
+}
